@@ -75,14 +75,15 @@ def quiz():
 		right_answers = db.child("quizes").get().val()
 		if request.form["q1"] == right_answers["How many Ballon D'ors Has Messi Won?"]:
 			score+=1
-		elif request.form["q2"] == right_answers["How Many Teams has Messi Played for?"]:	
+		if request.form["q2"] == right_answers["How Many Teams has Messi Played for?"]:	
 			score+=1
-		elif request.form["q3"] == right_answers["What Club Does Messi Play For?"]:	
+		if request.form["q3"] == right_answers["What Club Does Messi Play For?"]:	
 			score+=1
-		elif request.form["q4"] == right_answers["What's Messi's Height?"]:
+		if request.form["q4"] == right_answers["What's Messi's Height?"]:
 			score+=1	
-		elif request.form["q5"] == right_answers["What's Messi's strong foot"]:	
+		if request.form["q5"] == right_answers["Whats's Messi's strong foot"]:	
 			score+=1
+		print(score)
 		
 
 		username=db.child("Users").child(session['user']['localId']).get().val()['username']
