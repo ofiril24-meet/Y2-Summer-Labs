@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Messi's Website</title>
+    <style>
+        /* Reset styles and basic setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 400px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1a0dab; /* Dark blue text */
+        }
+        h2, h3 {
+            margin-bottom: 10px;
+            color: #333333; /* Dark gray text */
+        }
+        form {
+            text-align: center;
+        }
+        input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            width: calc(100% - 20px); /* Adjust width */
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #1a0dab; /* Dark blue focus color */
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #1a0dab; /* Dark blue button */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0d6efd; /* Dark blue hover */
+        }
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #1a0dab; /* Dark blue link color */
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Sign In</h1>
 
+        <form action="/signin" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required><br>
+            <input type="password" name="password" placeholder="Enter your password" required><br>
+            <input type="submit" value="Sign In"><br>
+
+            <a href="/">Don't have an account yet? Sign up here.</a>
+        </form>
+    </div>
 </body>
 </html>

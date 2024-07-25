@@ -55,7 +55,7 @@ def home():
  
 @app.route('/signin' , methods=['GET' ,'POST'])  
 def signin():
-  if request.method == "POST":
+  if request.method == 'POST':
     # return render_template('signin.html')
     email = request.form['email']
     password = request.form['password']

@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <title>Messi Quiz</title>
+    <style>
+        /* Reset styles and basic setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #1a0dab; /* Dark blue text */
+            margin-bottom: 20px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #1a0dab; /* Dark blue button */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0d6efd; /* Dark blue hover */
+        }
+    </style>
 </head>
 <body>
+
+<form action="/quiz" method="POST">
+    <h2>How Many Ballon d'Ors Has Messi Won?</h2>
+    Eight: <input type="radio" name="q1" value="Eight">
+    Six: <input type="radio" name="q1" value="Six">
+    Seven: <input type="radio" name="q1" value="Seven">
+    Zero they're all stolen: <input type="radio" name="q1" value="Zero they're all stolen">
+    <br><br>
+
+    <h2>How Many Teams has Messi Played For?</h2>
+    Four: <input type="radio" name="q2" value="Four">
+    Two: <input type="radio" name="q2" value="Two">
+    Five: <input type="radio" name="q2" value="Five">
+    Three: <input type="radio" name="q2" value="Three">
+    <br><br>
+
+    <h2>What Club Does Messi Play For?</h2>
+    Argentina: <input type="radio" name="q3" value="Argentina">
+    Barcelona: <input type="radio" name="q3" value="Barcelona">
+    Manchester City: <input type="radio" name="q3" value="Manchester City">
+    Inter Miami: <input type="radio" name="q3" value="Inter Miami">
+    <br><br>
+
+    <h2>What's Messi's Height?</h2>
+    170: <input type="radio" name="q4" value="170">
+    155: <input type="radio" name="q4" value="155">
+    162: <input type="radio" name="q4" value="162">
+    159: <input type="radio" name="q4" value="159">
+    <br><br>
+
+    <h2>What's Messi's Strong Foot?</h2>
+    Right: <input type="radio" name="q5" value="Right">
+    Left: <input type="radio" name="q5" value="Left">
+    Both: <input type="radio" name="q5" value="Both">
+    None of The Above: <input type="radio" name="q5" value="None of The Above">
+    <br><br>
+
+    <input type="submit" name="submit" value="Submit">
+</form>
 
 </body>
 </html>
